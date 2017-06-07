@@ -1,0 +1,48 @@
+$header_height: 50px;
+
+.header {
+  width: 100%;
+  height: $header_height;
+  background-color: $header_grey;
+  .container {
+    height: 100%;
+    position: relative;
+  }
+  .nav {
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    .item {
+      color: $white;
+      height: 100%;
+      display: inline-block;
+      a {
+        color: $white;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0 24px;
+        height: 100%;
+        line-height: $header_height;
+        display: inline-block;
+        cursor: pointer;
+        &:hover {
+          background-color: #434343;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .logo {
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    top: 0;
+    height: 100%;
+    width: 90px;
+    background-image: asset-url('name_white.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 58%;
+    margin-right: 30px;
+  }
+}

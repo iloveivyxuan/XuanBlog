@@ -1,0 +1,42 @@
+.banner {
+  width: 100%;
+  height: 300px;
+  background-color: $banner_background;
+  .container {
+    height: 100%;
+    padding-top: 50px;
+  }
+  .title {
+    width: 400px;
+    height: 140px;
+    background-image: asset-url('name.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 0 auto;
+  }
+  .subtitle {
+    color: $header_grey;
+    font-size: 20px;
+    width: 400px;
+    text-align: center;
+    margin: 10px auto;
+    font-weight: 300;
+    word-spacing: 6px;
+    letter-spacing: 2px;
+  }
+}
+
+@media(max-width: 560px) {
+  .banner {
+    height: 260px;
+    .title {
+      width: 240px;
+      height: 104px;
+    }
+    .subtitle {
+      font-size: 18px;
+      width: 96%;
+    }
+  }
+}

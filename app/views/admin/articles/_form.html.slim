@@ -1,0 +1,34 @@
+= form_for [:admin, @article] do |f|
+  = f.label :title
+  = f.text_field :title
+  br
+  = f.label :subtitle
+  = f.text_field :subtitle
+  br
+  = f.label :pre_content
+  = f.text_area :pre_content
+  br
+  = f.label :time
+  = f.text_field :time
+  br
+  = f.label :banner
+  = f.file_field :banner
+  br
+  = f.label :text
+  = f.text_area :text, id: "editor"
+  = f.submit
+= link_to 'back', admin_articles_path
+
+
+javascript:
+  var editor = new Simditor({
+    textarea: $('#editor'),
+    markdown: true,
+    toolbar: [
+      'title','bold','italic','underline','strikethrough','color','|',
+      'ol','ul','blockquote','code','table','link','image','hr','|',
+      'indent','outdent', '|', 'markdown'
+    ],
+    pasteImage: true,
+    defaultImage: '<%= image_path "upload-loading.png" %>',
+  });

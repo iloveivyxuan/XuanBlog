@@ -1,0 +1,13 @@
+doctype html
+html
+	head
+		title 张瑄的博客 | XuanBlog
+		meta charset="utf-8"
+		meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1"
+		= csrf_meta_tags
+		= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+		= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+	body class="#{controller_name} #{action_name}"
+		= render 'components/header'
+		= yield
+		= render 'components/footer'

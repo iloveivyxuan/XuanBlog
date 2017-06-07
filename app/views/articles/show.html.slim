@@ -1,0 +1,28 @@
+.intro-header style="background-image: url(#{@article.banner})"
+  .header-mask
+  .container
+    .row
+      .post-heading
+        h1.title
+          = @article.title
+        h2.subtitle
+          = @article.subtitle
+        span.meta
+          = @article.time
+
+.container
+  .content
+    == @article.text
+    .push_comments
+      = form_for [@article, @article.comments.build], html: {class: 'comment_area'} do |f|
+        = f.text_area :body, class: "text_area", placeholder: '|´・ω・)ノ不说点啥吗'
+        = f.text_field :commenter, class: 'name', placeholder: '昵称'
+        = f.submit '评论', class: 'button'
+    .comments
+      - @article.comments.each do |comment|
+        .comment
+          .avatar
+          .name
+            = comment.commenter
+          .body
+            = comment.body

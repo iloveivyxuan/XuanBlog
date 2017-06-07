@@ -1,0 +1,11 @@
+.article-preview
+  = link_to article_path(article), class: "link"
+    .title
+      = article.title
+    .sub-title
+      = article.subtitle
+  .content-preview
+    = article.pre_content[0, 140]
+    | ...
+  .meta
+    | December 28, 2015

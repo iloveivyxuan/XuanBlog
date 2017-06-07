@@ -1,0 +1,5 @@
+= render 'components/banner'
+.container
+  .content
+    - @articles.each do |article|
+      = render 'components/article_preview', article: article

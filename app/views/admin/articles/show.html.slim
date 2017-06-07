@@ -1,0 +1,10 @@
+p
+	strong
+		| Titile
+		= @article.title
+p
+	strong
+		| Text
+		== @article.text
+
+= link_to 'edit', edit_admin_article_path(@article)
