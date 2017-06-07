@@ -3,5 +3,21 @@
     width: 100%;
     margin-top: 60px;
     text-align: center;
+    .avatar {
+      width: 100px;
+      height: 100px;
+      background-image: asset-url('me.png');
+      background-size: contain;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    a {
+      color: $blue;
+      &:hover {
+        cursor: pointer;
+        color: $dark_blue;
+        text-decoration: none;
+      }
+    }
   }
 }
