@@ -20,9 +20,10 @@
         = f.submit '评论', class: 'button'
     .comments
       - @article.comments.each do |comment|
-        .comment
-          .avatar
-          .name
-            = comment.commenter
-          .body
-            = comment.body
+        - if comment.body
+          .comment
+            .avatar
+            .name
+              = comment.commenter
+            .body
+              = comment.body
